@@ -1,0 +1,1800 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-13 "http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#" >
+    <!ENTITY AvoirLivraison "http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirLivraison&amp;" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:AvoirLivraison="&untitled-ontology-13;AvoirLivraison&amp;"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-13="http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AEntendre -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AEntendre">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirMessages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ALire -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;ALire">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirMessages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Accepter -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Accepter">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;RépondreA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AjouterAuPanier -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AjouterAuPanier">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Panier"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AjouterAuPanier"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Panier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AunePersonne -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AunePersonne">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;EnvoyerMessage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Avoir -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Avoir">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirMessages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirCategorie -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirCategorie">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Catégorie"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AvoirCategorie"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Catégorie"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirConversation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirConversation">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Conversation"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirEtatCommande -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirEtatCommande">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Commande"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;EtatCommande"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AvoirEtatCommande"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;EtatCommande"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirLivraison&amp;Panier -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirLivraison&amp;Panier">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Commande"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Livraison"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Panier"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AvoirLivraison&amp;Panier"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Livraison"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AvoirLivraison&amp;Panier"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Panier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirMessages -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirMessages">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Message"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirProduits -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirProduits">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Panier"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Produit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AvoirTypeCommande -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;AvoirTypeCommande">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Commande"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;TypeCommande"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;AvoirTypeCommande"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;TypeCommande"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commander -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Commander">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Commande"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;Commander"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Commande"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commenter -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Commenter">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Commentaire"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Interagir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Consulter -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Consulter">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;EtatCommande"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Créer -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Créer">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;Créer"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Produit"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DansGroupe -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;DansGroupe">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;EnvoyerMessage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DeGroupe -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;DeGroupe">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirConversation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Demander -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Demander">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;Demander"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Requete"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnHybride -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;EnHybride">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;ParticiperAuxEnchères"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnLigne -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;EnLigne">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;ParticiperAuxEnchères"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnPersonne -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;EnPersonne">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;ParticiperAuxEnchères"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnvoyerMessage -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;EnvoyerMessage">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Message"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Express -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Express">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;RemplirCoordonnéesLivraion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Gérer -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Gérer">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Admin"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#GérerAdmins -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;GérerAdmins">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Gérer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#GérerArtistes -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;GérerArtistes">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Gérer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#GérerClients -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;GérerClients">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Gérer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Interagir -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Interagir">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Avis"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Normale -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Normale">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirConversation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Noter -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Noter">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Interagir"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Note"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Originale -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Originale">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirCategorie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#PArCarte -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;PArCarte">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Payer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParCash -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;ParCash">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Payer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParCheque -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;ParCheque">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;Payer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParticiperAuxEnchères -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;ParticiperAuxEnchères">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Enchère"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParticiperAvecParticipation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;ParticiperAvecParticipation">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Payer -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Payer">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;Payer"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;ModePaiement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Peproduite -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Peproduite">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirCategorie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#PeutPayerAvec -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;PeutPayerAvec">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;PeutPayerAvec"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;ModePaiement"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Programmée -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Programmée">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirTypeCommande"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Refuser -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Refuser">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;RépondreA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#RemplirCoordonnéesLivraion -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;RemplirCoordonnéesLivraion">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Client"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Livraison"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;RemplirCoordonnéesLivraion"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Livraison"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#RépondreA -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;RépondreA">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-13;RépondreA"/>
+                <owl:onClass rdf:resource="&untitled-ontology-13;Requete"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Standard -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Standard">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;RemplirCoordonnéesLivraion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Standarisée -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;Standarisée">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;AvoirTypeCommande"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Adresse -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Adresse">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#AdresseLivraison -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;AdresseLivraison">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Age -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Age">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#CategorieRequete -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;CategorieRequete">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionAvis -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionAvis">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionEtatCommande -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionEtatCommande">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionModePaiement -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionModePaiement">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionParticipation -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionParticipation">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionProduit -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionProduit">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionRequete -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionRequete">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#DescriptionTypeCommande -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;DescriptionTypeCommande">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Dislike -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Dislike">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Email -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Email">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EtatRequete -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;EtatRequete">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ImageCommentaire -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;ImageCommentaire">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ImageProduit -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;ImageProduit">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ImageRequete -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;ImageRequete">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Like -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Like">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#MDP -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;MDP">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Message -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Message">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#MontantEnchère -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;MontantEnchère">
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#NomCategorie -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;NomCategorie">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#NomConversation -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;NomConversation">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#NombreProduitsPanier -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;NombreProduitsPanier">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#PrixProduit -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;PrixProduit">
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#TitreProduit -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;TitreProduit">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Total -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;Total">
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ValeurNote -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;ValeurNote">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Admin -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Admin">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Artiste -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Artiste">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Avis -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Avis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Carte -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Carte">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;ModePaiement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Catégorie -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Catégorie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Cheque -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Cheque">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;ModePaiement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Client -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Client">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commande -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Commande">
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;EtatCommande"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;Produit"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;TypeCommande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commentaire -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Commentaire">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Avis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Conversation -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Conversation">
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ConversationGroupe -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;ConversationGroupe">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Conversation"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;ConversationNormale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ConversationNormale -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;ConversationNormale">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Conversation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnAttenteTraitement -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EnAttenteTraitement">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;EtatCommande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnCoursTraitement -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EnCoursTraitement">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;EtatCommande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Enchère -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Enchère"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnchèreHybride -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EnchèreHybride">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Enchère"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnchèrePrésentielle -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EnchèrePrésentielle">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Enchère"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EnchèreVirtuelle -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EnchèreVirtuelle">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Enchère"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Espece -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Espece">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;ModePaiement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EtatCommande -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;EtatCommande"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Image -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Image">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Livraison -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Livraison"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#LivraisonExpress -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;LivraisonExpress">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Livraison"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;LivraisonStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#LivraisonStandard -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;LivraisonStandard">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Livraison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Message -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Message"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ModePaiement -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;ModePaiement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Note -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Note">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Avis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Originale -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Originale">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Catégorie"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;Reproduite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Panier -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Panier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Participation -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Participation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParticipationInstantannée -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;ParticipationInstantannée">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Participation"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;ParticipationProgrammée"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#ParticipationProgrammée -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;ParticipationProgrammée">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Participation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Peinture -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Peinture">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Requete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Photographie -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Photographie">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Requete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Produit -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Produit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Programmée -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Programmée">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;TypeCommande"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-13;Standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Reproduite -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Reproduite">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Catégorie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Requete -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Requete"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Sculpture -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Sculpture">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Requete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Standard -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Standard">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;TypeCommande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Texte -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Texte">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Traitée -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Traitée">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;EtatCommande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#TypeCommande -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;TypeCommande"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Utilisateur -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Utilisateur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Vocal -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Vocal">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-13;Message"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Anis -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Anis">
+        <rdf:type rdf:resource="&untitled-ontology-13;Admin"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <Adresse>5 rue des lilas</Adresse>
+        <MDP>1234</MDP>
+        <Age>24</Age>
+        <Email>anis@gmail.com</Email>
+        <Gérer rdf:resource="&untitled-ontology-13;Anis"/>
+        <AvoirConversation rdf:resource="&untitled-ontology-13;Commande2"/>
+        <Gérer rdf:resource="&untitled-ontology-13;Dhia"/>
+        <Gérer rdf:resource="&untitled-ontology-13;Dorra"/>
+        <Gérer rdf:resource="&untitled-ontology-13;Farah"/>
+        <Gérer rdf:resource="&untitled-ontology-13;Nour"/>
+        <EnvoyerMessage rdf:resource="&untitled-ontology-13;zach"/>
+        <Gérer rdf:resource="&untitled-ontology-13;zach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Avis1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Avis1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Avis"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Commentaire"/>
+        <DescriptionAvis>je n&apos;ai pas aime, trop de couleurs a mon gout</DescriptionAvis>
+        <Dislike>oui</Dislike>
+        <ImageCommentaire>img.jpg</ImageCommentaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Avis2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Avis2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Avis"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Commentaire"/>
+        <ImageCommentaire>help.gif</ImageCommentaire>
+        <Like>non</Like>
+        <DescriptionAvis>j&apos;ai trop aime ca a ete un des plus beaux oeuvres d&apos;art que j&apos;ai jamis vu !!!!</DescriptionAvis>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#CarteMasterCard -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;CarteMasterCard">
+        <rdf:type rdf:resource="&untitled-ontology-13;Carte"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>Carte internationale</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#CartePaypal -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;CartePaypal">
+        <rdf:type rdf:resource="&untitled-ontology-13;Carte"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>une des cartes les plus utilisées</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#CarteVisa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;CarteVisa">
+        <rdf:type rdf:resource="&untitled-ontology-13;Carte"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>Carte souvent utilisée aimée par les clients</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Categorie1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Categorie1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Catégorie"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Originale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Categorie2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Categorie2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Catégorie"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Reproduite"/>
+        <NomCategorie>une reproduction presque identique</NomCategorie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Cheque1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Cheque1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Cheque"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>cheque barre</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Cheque2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Cheque2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Cheque"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>cheque non barre</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commande1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Commande1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Commande"/>
+        <Total>1000</Total>
+        <AvoirEtatCommande rdf:resource="&untitled-ontology-13;EtatCommande1"/>
+        <AvoirLivraison:Panier rdf:resource="&untitled-ontology-13;Livraison1"/>
+        <AvoirLivraison:Panier rdf:resource="&untitled-ontology-13;Livraison2"/>
+        <AvoirLivraison:Panier rdf:resource="&untitled-ontology-13;PAnier2"/>
+        <AvoirLivraison:Panier rdf:resource="&untitled-ontology-13;Panier1"/>
+        <AvoirLivraison:Panier rdf:resource="&untitled-ontology-13;Panier3"/>
+        <Programmée rdf:resource="&untitled-ontology-13;TypeCommande1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Commande2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Commande2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Commande"/>
+        <Total>55</Total>
+        <AvoirEtatCommande rdf:resource="&untitled-ontology-13;EtatCommande2"/>
+        <AvoirEtatCommande rdf:resource="&untitled-ontology-13;EtatCommande3"/>
+        <Standarisée rdf:resource="&untitled-ontology-13;TypeCommande2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Conversation1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Conversation1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Conversation"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ConversationGroupe"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ConversationNormale"/>
+        <NomConversation>MonAmi</NomConversation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Conversation2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Conversation2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Conversation"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ConversationNormale"/>
+        <NomConversation>5TWIN2</NomConversation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Dhia -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Dhia">
+        <rdf:type rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <Email>dhia@esprit.tn</Email>
+        <Age>29</Age>
+        <MDP>1111</MDP>
+        <Adresse>tunis, rue de marseille</Adresse>
+        <AunePersonne rdf:resource="&untitled-ontology-13;Nour"/>
+        <Accepter rdf:resource="&untitled-ontology-13;PhotograhieLevéeSoleil"/>
+        <Créer rdf:resource="&untitled-ontology-13;PhotograhieLevéeSoleil"/>
+        <Refuser rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+        <Créer rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Dorra -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Dorra">
+        <rdf:type rdf:resource="&untitled-ontology-13;Client"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <Age>30</Age>
+        <Email>dorra@ieee.org</Email>
+        <Adresse>rue liberte, Ariana centre</Adresse>
+        <MDP>0000</MDP>
+        <ParCash rdf:resource="&untitled-ontology-13;CarteMasterCard"/>
+        <Payer rdf:resource="&untitled-ontology-13;CarteMasterCard"/>
+        <Payer rdf:resource="&untitled-ontology-13;Cheque1"/>
+        <ParCash rdf:resource="&untitled-ontology-13;Cheque1"/>
+        <Payer rdf:resource="&untitled-ontology-13;Cheque2"/>
+        <ParCash rdf:resource="&untitled-ontology-13;Cheque2"/>
+        <EnPersonne rdf:resource="&untitled-ontology-13;Enchere1"/>
+        <ParticiperAuxEnchères rdf:resource="&untitled-ontology-13;Enchere2"/>
+        <ParticiperAuxEnchères rdf:resource="&untitled-ontology-13;Enchere3"/>
+        <EnPersonne rdf:resource="&untitled-ontology-13;Enchere3"/>
+        <Consulter rdf:resource="&untitled-ontology-13;EtatCommande3"/>
+        <RemplirCoordonnéesLivraion rdf:resource="&untitled-ontology-13;Livraison2"/>
+        <AjouterAuPanier rdf:resource="&untitled-ontology-13;Panier3"/>
+        <ParticiperAvecParticipation rdf:resource="&untitled-ontology-13;Participation1"/>
+        <Demander rdf:resource="&untitled-ontology-13;TableauVueMer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Enchere1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Enchere1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Enchère"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;EnchèreHybride"/>
+        <MontantEnchère>670020</MontantEnchère>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Enchere2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Enchere2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Enchère"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;EnchèrePrésentielle"/>
+        <MontantEnchère>3400</MontantEnchère>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Enchere3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Enchere3">
+        <rdf:type rdf:resource="&untitled-ontology-13;Enchère"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;EnchèreVirtuelle"/>
+        <MontantEnchère>100020</MontantEnchère>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Espece1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Espece1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Espece"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>le montant doit etre en cash </DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Espece2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Espece2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Espece"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ModePaiement"/>
+        <DescriptionModePaiement>le cash doit etre suffisant</DescriptionModePaiement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EtatCommande1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;EtatCommande1">
+        <rdf:type rdf:resource="&untitled-ontology-13;EnAttenteTraitement"/>
+        <DescriptionEtatCommande>admin doit intervenir</DescriptionEtatCommande>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EtatCommande2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;EtatCommande2">
+        <rdf:type rdf:resource="&untitled-ontology-13;EnCoursTraitement"/>
+        <DescriptionEtatCommande>admin en train de traiter</DescriptionEtatCommande>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#EtatCommande3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;EtatCommande3">
+        <rdf:type rdf:resource="&untitled-ontology-13;Traitée"/>
+        <DescriptionEtatCommande>admin a fini de traiter , commande prete</DescriptionEtatCommande>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Farah -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Farah">
+        <rdf:type rdf:resource="&untitled-ontology-13;Admin"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <MDP>1578</MDP>
+        <Email>farah@yahoo.fr</Email>
+        <Age>18</Age>
+        <Adresse>rue aeroport, mornag</Adresse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Livraison1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Livraison1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Livraison"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;LivraisonExpress"/>
+        <AdresseLivraison>Kiosque geant</AdresseLivraison>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Livraison2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Livraison2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Livraison"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;LivraisonStandard"/>
+        <AdresseLivraison>maison num 17, rue de l&apos;aeroport, tunis</AdresseLivraison>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Message1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Message1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Image"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Message"/>
+        <Message>img.gif</Message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Message2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Message2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Message"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Texte"/>
+        <Message>salut, bonjour</Message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Message3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Message3">
+        <rdf:type rdf:resource="&untitled-ontology-13;Message"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Vocal"/>
+        <Message>IIIiiiiiiiIIIIIIIIIIIIIIIIIIIiiiiIIIIIIIIIIIIIIiiiiiiiiiiii</Message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Note1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Note1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Avis"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Note"/>
+        <ValeurNote>5</ValeurNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Note2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Note2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Avis"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Note"/>
+        <ValeurNote>10</ValeurNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Nour -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Nour">
+        <rdf:type rdf:resource="&untitled-ontology-13;Client"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <MDP>1999</MDP>
+        <Age>22</Age>
+        <Email>nour@hotmail.com</Email>
+        <Adresse>rue lindependence, soukra</Adresse>
+        <PArCarte rdf:resource="&untitled-ontology-13;CartePaypal"/>
+        <Normale rdf:resource="&untitled-ontology-13;Dhia"/>
+        <DeGroupe rdf:resource="&untitled-ontology-13;Dorra"/>
+        <Payer rdf:resource="&untitled-ontology-13;Espece1"/>
+        <ParCash rdf:resource="&untitled-ontology-13;Espece1"/>
+        <Payer rdf:resource="&untitled-ontology-13;Espece2"/>
+        <ParCash rdf:resource="&untitled-ontology-13;Espece2"/>
+        <Consulter rdf:resource="&untitled-ontology-13;EtatCommande2"/>
+        <RemplirCoordonnéesLivraion rdf:resource="&untitled-ontology-13;Livraison1"/>
+        <Avoir rdf:resource="&untitled-ontology-13;Message1"/>
+        <ALire rdf:resource="&untitled-ontology-13;Message2"/>
+        <AEntendre rdf:resource="&untitled-ontology-13;Message3"/>
+        <AjouterAuPanier rdf:resource="&untitled-ontology-13;Panier1"/>
+        <ParticiperAvecParticipation rdf:resource="&untitled-ontology-13;Participation2"/>
+        <EnHybride rdf:resource="&untitled-ontology-13;PhotograhieLevéeSoleil"/>
+        <Noter rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+        <Demander rdf:resource="&untitled-ontology-13;uneSculpture"/>
+        <EnvoyerMessage rdf:resource="&untitled-ontology-13;zach"/>
+        <DeGroupe rdf:resource="&untitled-ontology-13;zach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#PAnier2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PAnier2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Panier"/>
+        <NombreProduitsPanier>90</NombreProduitsPanier>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Panier1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Panier1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Panier"/>
+        <NombreProduitsPanier>4</NombreProduitsPanier>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;Livraison2"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;PhotograhieLevéeSoleil"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;TableauVueMer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Panier3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Panier3">
+        <rdf:type rdf:resource="&untitled-ontology-13;Panier"/>
+        <NombreProduitsPanier>2</NombreProduitsPanier>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;PhotograhieLevéeSoleil"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;SculptureHabibBourguiba"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;unePeinture"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;unePhotographie"/>
+        <AvoirProduits rdf:resource="&untitled-ontology-13;uneSculpture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Participation1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Participation1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Participation"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ParticipationProgrammée"/>
+        <DescriptionParticipation>bcp de participations</DescriptionParticipation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#Participation2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Participation2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Participation"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;ParticipationInstantannée"/>
+        <DescriptionParticipation>participation rapide instantannée</DescriptionParticipation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#PhotograhieLevéeSoleil -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PhotograhieLevéeSoleil">
+        <rdf:type rdf:resource="&untitled-ontology-13;Photographie"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <DescriptionProduit>Une pièce sublime</DescriptionProduit>
+        <DescriptionRequete>Couleurs vifs, en bon etats, avec nom de l&apos;artiste</DescriptionRequete>
+        <Originale rdf:resource="&untitled-ontology-13;Categorie1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#SculptureHabibBourguiba -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;SculptureHabibBourguiba">
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Sculpture"/>
+        <DescriptionProduit>un tableau fait avec amour</DescriptionProduit>
+        <DescriptionRequete>noir et blanc</DescriptionRequete>
+        <Peproduite rdf:resource="&untitled-ontology-13;Categorie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#TableauVueMer -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;TableauVueMer">
+        <rdf:type rdf:resource="&untitled-ontology-13;Peinture"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <DescriptionRequete>que des couleurs bleu</DescriptionRequete>
+        <DescriptionProduit>une pièce maitresse</DescriptionProduit>
+        <Peproduite rdf:resource="&untitled-ontology-13;Categorie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#TypeCommande1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;TypeCommande1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Programmée"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;TypeCommande"/>
+        <DescriptionTypeCommande>Programmée a l&apos;avance de 2 semaines</DescriptionTypeCommande>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#TypeCommande2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;TypeCommande2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Standard"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;TypeCommande"/>
+        <DescriptionTypeCommande>Commande livrée apres 1-3jours</DescriptionTypeCommande>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#unePeinture -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;unePeinture">
+        <rdf:type rdf:resource="&untitled-ontology-13;Peinture"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <DescriptionRequete>peinture de votre choix</DescriptionRequete>
+        <DescriptionProduit>explosion de sensations</DescriptionProduit>
+        <Peproduite rdf:resource="&untitled-ontology-13;Categorie1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#unePhotographie -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;unePhotographie">
+        <rdf:type rdf:resource="&untitled-ontology-13;Photographie"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <DescriptionProduit>photographie d&apos;une diva</DescriptionProduit>
+        <DescriptionRequete>je veux cacher les imperfections de mon visage</DescriptionRequete>
+        <Peproduite rdf:resource="&untitled-ontology-13;Categorie1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#uneSculpture -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;uneSculpture">
+        <rdf:type rdf:resource="&untitled-ontology-13;Produit"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Requete"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Sculpture"/>
+        <DescriptionProduit>sculpture magique</DescriptionProduit>
+        <DescriptionRequete>je veux que ca soit grandiose</DescriptionRequete>
+        <Originale rdf:resource="&untitled-ontology-13;Categorie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#zach -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;zach">
+        <rdf:type rdf:resource="&untitled-ontology-13;Artiste"/>
+        <rdf:type rdf:resource="&untitled-ontology-13;Utilisateur"/>
+        <Adresse>17 rue monastir, sousse</Adresse>
+        <Age>44</Age>
+        <Email>zach@esprit.tn</Email>
+        <MDP>3418</MDP>
+        <AvoirConversation rdf:resource="&untitled-ontology-13;Dhia"/>
+        <AvoirConversation rdf:resource="&untitled-ontology-13;TableauVueMer"/>
+        <Accepter rdf:resource="&untitled-ontology-13;unePeinture"/>
+        <AvoirConversation rdf:resource="&untitled-ontology-13;unePhotographie"/>
+        <Commenter rdf:resource="&untitled-ontology-13;unePhotographie"/>
+        <Refuser rdf:resource="&untitled-ontology-13;uneSculpture"/>
+        <AvoirConversation rdf:resource="&untitled-ontology-13;uneSculpture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;Peinture"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Photographie"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Sculpture"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;EnAttenteTraitement"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;EnCoursTraitement"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Traitée"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;EnchèreHybride"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;EnchèrePrésentielle"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;EnchèreVirtuelle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;Image"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Texte"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Vocal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;Admin"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Artiste"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Client"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-13;Carte"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Cheque"/>
+            <rdf:Description rdf:about="&untitled-ontology-13;Espece"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
