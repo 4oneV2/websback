@@ -1,0 +1,6 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?client ?modePaiement
+WHERE {
+  ?client ont:Payer ?modePaiement.
+}

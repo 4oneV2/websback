@@ -1,0 +1,20 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?client ?enchere ?typeRelation
+WHERE {
+  ?client ont:ParticiperAuxEnchères ?enchere.
+  ?enchere a ont:Enchère.
+
+  OPTIONAL {
+    ?client ont:EnHybride ?enchere.
+    BIND("EnHybride" AS ?typeRelation)
+  }
+  OPTIONAL {
+    ?client ont:EnLigne ?enchere.
+    BIND("EnLigne" AS ?typeRelation)
+  }
+  OPTIONAL {
+    ?client ont:EnPersonne ?enchere.
+    BIND("EnPersonne" AS ?typeRelation)
+  }
+}

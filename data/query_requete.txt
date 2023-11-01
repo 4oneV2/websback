@@ -1,0 +1,11 @@
+
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?classe ?description
+WHERE {
+  ?classe a ont:Requete.
+  OPTIONAL {
+    ?classe ont:DescriptionRequete ?description.
+  }
+}

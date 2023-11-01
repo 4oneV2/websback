@@ -1,0 +1,6 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+SELECT ?commande ?total
+WHERE {
+  ?commande a ont:Commande.
+  ?commande ont:Total ?total.
+}

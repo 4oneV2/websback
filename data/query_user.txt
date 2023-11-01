@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?user ?type ?email ?age ?adresse
+WHERE {
+  ?user rdf:type ont:Utilisateur.
+  OPTIONAL {
+
+    ?user ont:Email ?email.
+    ?user ont:Age ?age.
+    ?user ont:Adresse ?adresse.
+  }
+}

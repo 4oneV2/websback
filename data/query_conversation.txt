@@ -1,0 +1,9 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?conversation ?nom
+WHERE {
+  ?conversation a ont:Conversation.
+  OPTIONAL {
+    ?conversation ont:NomConversation ?nom.
+  }
+}

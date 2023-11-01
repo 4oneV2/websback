@@ -1,0 +1,8 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?client ?participation
+WHERE {
+  ?client ont:ParticiperAvecParticipation ?participation.
+  ?client a ont:Client.
+  ?participation a ont:Participation.
+}

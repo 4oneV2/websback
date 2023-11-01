@@ -1,0 +1,18 @@
+PREFIX owl: <http://www.w3.org/2002/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+
+SELECT ?client ?avis ?commentaire ?note
+WHERE {
+  ?client a ont:Client.
+
+
+  ?client ont:Commenter ?commentaire.
+
+
+  ?client ont:Interagir ?avis.
+
+
+  ?client ont:Noter ?note.
+}

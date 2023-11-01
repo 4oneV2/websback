@@ -1,0 +1,21 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?client ?message ?receptionType
+WHERE {
+  ?client a ont:Utilisateur.
+  ?client ont:AvoirMessages ?message.
+  {
+    ?message a ont:Vocal.
+    BIND("Reçu par écoute" as ?receptionType)
+  }
+  UNION
+  {
+    ?message a ont:Texte.
+    BIND("Reçu par lecture" as ?receptionType)
+  }
+  UNION
+  {
+    ?message a ont:Image.
+    BIND("Reçu en image" as ?receptionType)
+  }
+}

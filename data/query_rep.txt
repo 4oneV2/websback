@@ -1,0 +1,7 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?artiste ?requete
+WHERE {
+  ?artiste a ont:Artiste.
+  ?artiste ont:RépondreA ?requete.
+}

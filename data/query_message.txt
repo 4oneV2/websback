@@ -1,0 +1,23 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?message ?type ?content
+WHERE {
+  ?message a ont:Message.
+  {
+    ?message a ont:Image.
+    BIND("Image" as ?type)
+  }
+  UNION
+  {
+    ?message a ont:Vocal.
+    BIND("Vocal" as ?type)
+  }
+  UNION
+  {
+    ?message a ont:Texte.
+    BIND("Texte" as ?type)
+  }
+  OPTIONAL {
+    ?message ont:Message ?content.
+  }
+}

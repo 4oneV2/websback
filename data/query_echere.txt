@@ -1,0 +1,43 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT DISTINCT ?enchere ?type ?montant
+WHERE {
+  {
+    ?enchere a/rdf:type* ont:Enchère .
+    BIND(
+      IF( EXISTS { ?enchere rdf:type ont:EnchèreHybride }, "EnchèreHybride",
+      IF( EXISTS { ?enchere rdf:type ont:EnchèrePrésentielle }, "EnchèrePrésentielle",
+      IF( EXISTS { ?enchere rdf:type ont:EnchèreVirtuelle }, "EnchèreVirtuelle",
+      "Enchère")))
+      AS ?type
+    )
+    OPTIONAL {
+      ?enchere ont:MontantEnchère ?montant .
+    }
+  }
+  UNION
+  {
+    ?enchere rdf:type ont:EnchèreHybride .
+    BIND("EnchèreHybride" AS ?type)
+    OPTIONAL {
+      ?enchere ont:MontantEnchère ?montant .
+    }
+  }
+  UNION
+  {
+    ?enchere rdf:type ont:EnchèrePrésentielle .
+    BIND("EnchèrePrésentielle" AS ?type)
+    OPTIONAL {
+      ?enchere ont:MontantEnchère ?montant .
+    }
+  }
+  UNION
+  {
+    ?enchere rdf:type ont:EnchèreVirtuelle .
+    BIND("EnchèreVirtuelle" AS ?type)
+    OPTIONAL {
+      ?enchere ont:MontantEnchère ?montant .
+    }
+  }
+}

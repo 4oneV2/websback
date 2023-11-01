@@ -1,0 +1,16 @@
+PREFIX ont: <http://www.semanticweb.org/nour/ontologies/2023/9/untitled-ontology-13#>
+
+SELECT ?artiste ?client ?relation
+WHERE {
+
+  {
+    ?artiste ont:DeGroupe ?client.
+    BIND("DeGroupe" as ?relation)
+  }
+  UNION
+  {
+    ?artiste ont:Normale ?client.
+    BIND("Normale" as ?relation)
+  }
+  ?client a ont:Utilisateur.
+}
